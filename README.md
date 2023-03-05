@@ -1,6 +1,8 @@
 # Overview
-The repository contains all the lab work for the computer graphics course.
+The repository contains all the lab work for the computer graphics course.  
+
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=andrey1pf)](https://github.com/andrey1pf/Computer-graphics)    
+
 To run the application locally there are three options:  
     * run through the IDE
     * run through the terminal 

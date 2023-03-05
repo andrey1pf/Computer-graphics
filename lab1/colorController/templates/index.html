@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Converter</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/colorpicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+
+    <form method="POST">
+        <div class="container-cmyk">
+            <div class="left-panel-cmyk">
+                <! -- CMYK -->
+                <h1>CMYK Parameters</h1>
+                    <div class="input-group">
+                        <label for="cmyk1">Cyan from 0 to 100: </label>
+                        <input type="text" name="cmyk1" id="cmyk1" value={{ color.c }}>
+                        <input type="range" min="0" max="100" value={{ color.c }} class="slider-cmyk" id="slider-cmyk1">
+                    </div>
+                    <div class="input-group">
+                        <label for="cmyk2">Magenta from 0 to 100: </label>
+                        <input type="text" name="cmyk2" id="cmyk2" value={{ color.m }}>
+                        <input type="range" min="0" max="100" value={{ color.m }} class="slider-cmyk" id="slider-cmyk2">
+                    </div>
+                    <div class="input-group">
+                        <label for="cmyk3">Yellow from 0 to 100: </label>
+                        <input type="text" name="cmyk3" id="cmyk3" value={{ color.y }}>
+                        <input type="range" min="0" max="100" value={{ color.y }} class="slider-cmyk" id="slider-cmyk3">
+                    </div>
+                    <div class="input-group">
+                        <label for="cmyk4">Key from 0 to 100: </label>
+                        <input type="text" name="cmyk4" id="cmyk4" value={{ color.k }}>
+                        <input type="range" min="0" max="100" value={{ color.k }} class="slider-cmyk" id="slider-cmyk4">
+                    </div>
+                    <div class="submit-button-cmyk">
+                        <button type="submit" id="submit-button-cmyk" name="button" value="cmyk">Submit</button>
+                        {% if color.status == True %}
+                            <label id="error" name="error">Check that the data entered is correct</label>
+                        {% endif %}
+                    </div>
+            </div>
+            <div class="right-panel-cmyk">
+                <h1>Color palette for CMYK</h1>
+                <div id="color-box-cmyk"></div>
+            </div>
+            <div class="more-right-cmyk">
+                <div class="color-picker"></div>
+                <div id="color-indicator-cmyk" class="color-indicator"></div>
+                <div id="color-picker-cmyk"></div>
+            </div>
+        </div>
+
+        <div class="container-rgb">
+            <div class="left-panel-rgb">
+                <h1>RGB Parameters</h1>
+                    <div class="input-group">
+                        <label for="rgb1">Red from 0 to 255: </label>
+                        <input type="text" name="rgb1" id="rgb1" value={{ color.r }}>
+                        <input type="range" min="0" max="255" value={{ color.r }} class="slider-rgb" id="slider-rgb1">
+                    </div>
+                    <div class="input-group">
+                        <label for="rgb2">Green from 0 to 255: </label>
+                        <input type="text" name="rgb2" id="rgb2" value={{ color.g }}>
+                        <input type="range" min="0" max="255" value={{ color.g }} class="slider-rgb" id="slider-rgb2">
+                    </div>
+                    <div class="input-group">
+                        <label for="rgb3">Blue from 0 to 255: </label>
+                        <input type="text" name="rgb3" id="rgb3" value={{ color.b }}>
+                        <input type="range" min="0" max="255" value={{ color.b }} class="slider-rgb" id="slider-rgb3">
+                    </div>
+                    <div class="submit-button-rgb">
+                        <button type="submit" id="submit-button-rgb" name="button" value="rgb">Submit</button>
+                        {% if color.status == True %}
+                            <label id="error" name="error">Check that the data entered is correct</label>
+                        {% endif %}
+                    </div>
+            </div>
+            <div class="right-panel-rgb">
+                <h1>Color palette for RGB</h1>
+                <div id="color-box-rgb"></div>
+            </div>
+            <div class="more-right-rgb">
+                <div class="color-picker"></div>
+                <div id="color-indicator-rgb" class="color-indicator"></div>
+                <div id="color-picker-rgb"></div>
+            </div>
+        </div>
+
+        <div class="container-hls">
+            <div class="left-panel-hls">
+                <h1>HLS Parameters</h1>
+                    <div class="input-group">
+                        <label for="hls1">Hue from 0 to 360: </label>
+                        <input type="text" name="hls1" id="hls1" value={{ color.h }}>
+                        <input type="range" min="0" max="360" value={{ color.h }} class="slider-hls" id="slider-hls1">
+                    </div>
+                    <div class="input-group">
+                        <label for="hls2">Lightness from 0 to 100: </label>
+                        <input type="text" name="hls2" id="hls2" value={{ color.l }}>
+                        <input type="range" min="0" max="100" value={{ color.l }} class="slider-hls" id="slider-hls2">
+                    </div>
+                    <div class="input-group">
+                        <label for="hls3">Saturation from 0 to 100: </label>
+                        <input type="text" name="hls3" id="hls3" value={{ color.s }}>
+                        <input type="range" min="0" max="100" value={{ color.s }} class="slider-hls" id="slider-hls3">
+                    </div>
+                    <div class="submit-button-hls">
+                        <button type="submit" id="submit-button-hls" name="button" value="hls">Submit</button>
+                        {% if color.status == True %}
+                            <label id="error" name="error">Check that the data entered is correct</label>
+                        {% endif %}
+                    </div>
+            </div>
+            <div class="right-panel-hls">
+                <h1>Color palette for HLS</h1>
+                <div id="color-box-hls"></div>
+            </div>
+            <div class="more-right-hls">
+                <div class="color-picker"></div>
+                <div id="color-indicator-hls" class="color-indicator"></div>
+                <div id="color-picker-hls"></div>
+            </div>
+        </div>
+    </form>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

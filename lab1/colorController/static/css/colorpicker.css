@@ -1,0 +1,21 @@
+.color-picker{
+    position: relative;
+}
+
+#color-picker-cmyk{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
+}
+
+#color-picker-rgb{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+
+#color-picker-hls{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+}

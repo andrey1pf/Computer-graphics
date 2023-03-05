@@ -1,7 +1,10 @@
 # Overview
 The repository contains all the lab work for the computer graphics course.  
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=<Computer-graphics>&layout=compact)   
+The repository contains:
+  * Python files for backend
+  * HTML, CSS, JS files for frontend
+  * Docker to start the project
 
 To run the application locally there are three options:  
   * run through the IDE

@@ -9,17 +9,17 @@ The repository contains:
 To run the application locally there are three options:  
   * run through the IDE
   * run through the terminal 
-  * run through Docker.
+  * run through Docker
 
 # Branches
-main: Contains all project source files and Docker files for running the application
+main: Contains all project source files and Docker files for running the application.
 
 # Building
-+ IDE. Clone tris repository, you can use ```git clone``` or click on clone button. Install the IDE you like. For example you can use PyCharm.  
++ IDE. Clone the repository, you can do this by using command ```git clone``` or downloading the zip archive. Install the IDE you like. For example you can use PyCharm.  
 Install all the libraries you need for the application to work. See the requirements.txt file for a complete list.
-+ Terminal. Clone tris repository, you can use ```git clone``` or click on clone button.  
++ Terminal. Clone the repository, you can do this by using command ```git clone``` or downloading the zip archive.  
 The next step is to enter a command ```python app.py``` in the project folder.
-+ Docker. You have two options:
++ Docker. Clone the repository, you can do this by using command ```git clone``` or downloading the zip archive. You have two options:
   * start with docker-compose - You need to execute two commands (in the project folder) ```docker build -t color_app:dev .``` and  
   then ```docker run -p 5000:5000 color_app:dev```.
   * without docker-compose - You need to execute one command (in the project folder) ```docker-compose up```.  

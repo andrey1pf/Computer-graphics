@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Загрузка данных в таблицу из Python</title>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+	<div class="container">
+		<form action="" method="POST">
+			<label for="folder-path">Введите путь к папке:</label>
+			<input type="text" id="folder-path" name="folder-path">
+			<button type="submit" name="submit">Проверить</button>
+		</form>
+		{% if file_data %}
+		<table>
+			<thead>
+				<tr>
+					<th>Имя файла</th>
+					<th>Размер изображения</th>
+					<th>Разрешение</th>
+					<th>Глубина цвета</th>
+					<th>Сжатие</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for file in file_data %}
+				<tr>
+					<td>{{ file[0] }}</td>
+					<td>{{ file[1] }}</td>
+					<td>{{ file[2] }}</td>
+					<td>{{ file[3] }}</td>
+					<td>{{ file[4] }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% endif %}
+	</div>
+</body>
+</html>

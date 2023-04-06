@@ -29,3 +29,5 @@ After that you can see how the application works by clicking on the link http://
 1. [lab1](https://github.com/andrey1pf/Computer-graphics/blob/main/Conditions/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%201.pdf)
 CMYK <--> RGB <--> HLS
 2. [lab2](https://github.com/andrey1pf/Computer-graphics/blob/main/Conditions/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%202_12_13%D0%B0%20%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%8B.pdf)
+3. [lab3](https://github.com/andrey1pf/Computer-graphics/blob/main/Conditions/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%203_%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%8B%2012%2C%2013%D0%B0_final.pdf)
+Option 6

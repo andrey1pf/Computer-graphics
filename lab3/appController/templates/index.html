@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Filter</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <h1>Image Filter</h1>
+    <form action="/process" method="POST">
+        <label for="img_path">Path to image:</label>
+        <input type="text" id="img_path" name="img_path">
+        <label for="filter">Filter:</label>
+        <select id="filter" name="filter">
+            <option value="methodOne">The Otsu Method</option>
+            <option value="methodTwo">Adaptive threshold processing method</option>
+            <option value="methodThree">Element-by-element image stacking with a blue channel</option>
+            <option value="methodFour">Element-by-element multiplication of an image by a mask</option>
+            <option value="methodFive">Linear image contrast</option>
+        </select>
+    <input type="submit" value="Apply filter">
+    </form>
+    <h2>Processed Image</h2>
+    <img id="processedImage" src="../images/img1.jpg" alt="Processed Image" >
+    <script>
+        // обработка события отправки формы
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault(); // предотвращаем отправку формы
+            var form = event.target;
+            var formData = new FormData(form);
+            // отправка данных формы на сервер
+            fetch('/process', {
+                method: 'POST',
+                body: formData
+            })
+            .then(function (response) {
+                return response.blob();
+            })
+            .then(function (blob) {
+                // отображение обработанного изображения
+                var processedImage = document.getElementById('processedImage');
+                processedImage.src = URL.createObjectURL(blob);
+            });
+        });
+    </script>
+</body>
+</html>
+

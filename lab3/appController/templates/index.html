@@ -20,7 +20,18 @@
     <input type="submit" value="Apply filter">
     </form>
     <h2>Processed Image</h2>
-    <img id="processedImage" src="../images/img1.jpg" alt="Processed Image" >
+    <div>
+        <h3>Default image</h3>
+        <img id="defImage" src="" alt="Processed Image" >
+        <h3>Image after using filter</h3>
+        <img id="processedImage" src="" alt="Processed Image" >
+    </div>
+    <script>
+        function showDef(){
+            let sourcePath = document.getElementById('img_path').value;
+            document.getElementById('defImage').src = sourcePath;
+        }
+    </script>
     <script>
         // обработка события отправки формы
         document.querySelector('form').addEventListener('submit', function (event) {
@@ -37,9 +48,10 @@
             })
             .then(function (blob) {
                 // отображение обработанного изображения
-                var processedImage = document.getElementById('processedImage');
+                const processedImage = document.getElementById('processedImage');
                 processedImage.src = URL.createObjectURL(blob);
             });
+            showDef();
         });
     </script>
 </body>

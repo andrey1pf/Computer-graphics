@@ -20,7 +20,9 @@ def home():
 @app.route('/process', methods=['POST'])
 def process():
     # Получение пути к изображению из формы
-    img_path = request.form['img_path']
+    path = request.form['img_path']
+    img_path = os.path.abspath('appController') + '/' + path
+    print(img_path)
 
     # Обработка изображения в зависимости от выбранного фильтра
     filter_type = request.form['filter']
